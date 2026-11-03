@@ -1,0 +1,5 @@
+main.wasm
+wasm_exec.js
+.agents/skills/browser-verify/e2e/node_modules/
+.agents/skills/browser-verify/e2e/artifacts/
+.agents/skills/browser-verify/e2e/package*.json

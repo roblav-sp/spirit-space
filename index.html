@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Spirit Space</title>
+	<style>
+		html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+		canvas { display: block; margin: 0 auto; }
+	</style>
+</head>
+<body>
+	<canvas id="game" width="800" height="600"></canvas>
+	<script src="wasm_exec.js"></script>
+	<script>
+		const go = new Go();
+		WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject)
+			.then((result) => go.run(result.instance))
+			.catch((err) => {
+				console.error(err);
+				document.body.innerHTML = "<pre style='color:red'>" + err + "</pre>";
+			});
+	</script>
+</body>
+</html>
