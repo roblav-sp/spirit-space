@@ -3,6 +3,10 @@
 > Implements FR-004 (lethal events), FR-005, BR-001, BR-007, AC-013…AC-017
 > (`specs/features/game-over-restart/`).
 
+> **v0.2 note.** Freeze + banner + R restart are preserved (M2/M3). The
+> lethal rules move to `plans/lives-respawn.md`; this plan's lethal-event
+> section is historical.
+
 ## Requirements being implemented
 Bottom-edge and player-collision game over (FR-004), frozen simulation
 (FR-005.1), restart via R (FR-005.1–.2).

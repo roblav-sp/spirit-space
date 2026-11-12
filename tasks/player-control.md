@@ -1,5 +1,8 @@
 # Tasks — Player Control
 
+> **v0.2 note.** Unchanged; see `tasks/main-menu.md` (TASK-MNU-04) for the
+> blur/preventDefault additions.
+
 ## TASK-PLC-01 — Axis movement and clamping
 - **Objective:** 4-direction movement at 300 px/s, clamped to the play field.
 - **Requirement IDs:** FR-001.1, FR-001.3, BR-005, AC-001, AC-002

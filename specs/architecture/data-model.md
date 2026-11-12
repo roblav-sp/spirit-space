@@ -42,8 +42,10 @@ erDiagram
 
 ## Data rules
 
-- No persistence, no serialization, no save/load. High scores are explicitly
-  out of scope (gameplay spec v0.1).
+- **v0.1 (implemented):** no persistence, no serialization, no save/load.
+  High scores are out of scope. **v0.2 (planned):** see "Migration concerns"
+  and "Planned v0.2 state" below; persistence stays local-only and requires
+  the proposed amendment.
 - Determinism: the only randomness is the seeded RNG (NFR-001). Two runs with
   identical input sequences produce identical states.
 - Death handling: entities are marked `Dead` and compacted in the same pass
@@ -51,5 +53,64 @@ erDiagram
 
 ## Migration concerns
 
-None. Any future persistence (e.g. localStorage high scores) would violate
-current constitution §6 and require an amendment plus an ADR.
+None for v0.1 state. v0.2 adds fields and two persisted documents; both are
+versioned and additive:
+
+- New `Game` state: `State`, `Lives`, `RunMetadata`, `PowerUps`, enemy
+  projectiles, pickups, `Score` sub-counters (combo multiplier, wave bonus).
+  Nothing is removed, so v0.1 fields keep their meaning.
+- Persisted documents (`spirit-space.scores.v1`,
+  `spirit-space.settings.v1`) are new: no migration from v0.1 exists because
+  v0.1 stored nothing. Unknown/older schema versions are discarded on read
+  with a clean default (SEC-003), never half-applied.
+
+## Planned v0.2 state (not implemented)
+
+```mermaid
+erDiagram
+    GAME ||--|| PLAYER : owns
+    GAME ||--|| RUNMETA : records
+    GAME ||--o{ ENEMY : owns
+    GAME ||--o{ BULLET : owns
+    GAME ||--o{ EPROJECTILE : owns
+    GAME ||--o{ PICKUP : owns
+    GAME {
+        State state
+        int Lives
+        int Score
+        float64 comboMultiplier
+        float64 comboWindow
+        int Stage
+        int Wave
+        Difficulty difficulty
+        SpeedScale speed
+        rand_Rand rng
+    }
+    RUNMETA {
+        uint64 seed
+        int rngVersion
+        Difficulty difficulty
+        SpeedScale speed
+    }
+    PICKUP {
+        string id
+        float64 ttl
+    }
+```
+
+Rules that keep this deterministic and testable:
+
+- `RunMetadata` is immutable after construction (FR-011.7).
+- Timers are stored in world seconds and decremented only by fixed steps
+  (ADR-0008); pausing stops every timer (FR-006.8).
+- Persisted structs contain no DOM types; `cmd/game` converts them to/from
+  `localStorage` strings (Law 5).
+- Anything persisted is untrusted on read: bounded, versioned, validated,
+  defaulted on failure (SEC-003).
+
+## Historical note (v0.1)
+
+The v0.1 text said: "Any future persistence (e.g. localStorage high scores)
+would violate current constitution §6 and require an amendment plus an ADR."
+Amendment 001 was **ratified 2026-11-12**, so §6 now permits exactly that
+narrow case; ADR-0007 is the ADR it anticipated.

@@ -1,5 +1,8 @@
 # Tasks — Game Over and Restart
 
+> **v0.2 note.** Terminal-state tasks remain valid; the lethal-event tasks
+> are superseded by `tasks/lives-respawn.md` (M3).
+
 ## TASK-GOR-01 — Lethal collision checks
 - **Objective:** game over when an enemy reaches the bottom edge or overlaps
   the player; check runs before scoring in the same pass (BR-007).

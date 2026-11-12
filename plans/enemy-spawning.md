@@ -3,6 +3,10 @@
 > Implements FR-003, BR-004, BR-006, AC-005…AC-008
 > (`specs/features/enemy-spawning/`).
 
+> **v0.2 note: superseded.** This plan describes v0.1 spawning only. Its
+> replacement is `plans/formation-ai.md` + `plans/procedural-waves.md` (M5).
+> Do not extend it.
+
 ## Requirements being implemented
 FR-003.1–.3 (interval, random X, constant drift), plus determinism (NFR-001).
 

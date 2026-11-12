@@ -1,5 +1,12 @@
 # Feature — Enemy Spawning and Movement
 
+> **v0.2 status: SUPERSEDED.** FR-003 (fixed-interval random-X spawn, straight
+> downward drift) is replaced by `specs/features/formation-ai/spec.md`
+> (FR-010) and `specs/features/procedural-waves/spec.md` (FR-011), and BR-004
+> (constant difficulty) by BR-011. The v0.1 rules below remain accurate until
+> M5 lands and stay documented for traceability history; new behaviour must
+> **not** be added here.
+
 ## Context
 Enemies are the game's threat and its scoring source. In v0.1 difficulty is
 constant (BR-004). Implements FR-003.
@@ -19,8 +26,10 @@ Game not over. Spawner runs inside `Update`.
   horizontal motion, no acceleration (BR-004).
 
 ## Business rules
-- BR-004: spawn delay and enemy speed are constant in v0.1.
+- BR-004: spawn delay and enemy speed are constant in v0.1. *(SUPERSEDED in
+  v0.2 by the difficulty budgets in `difficulty-speed`.)*
 - BR-006: the RNG is the game's own seeded instance (determinism, NFR-001).
+  *(v0.2: seed comes from `RunMetadata`, ADR-0009.)*
 
 ## Acceptance criteria
 - **AC-005** — Given a fresh game, when the simulation advances 1.2 s, then

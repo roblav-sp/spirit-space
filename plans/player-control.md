@@ -1,9 +1,13 @@
 # Plan — Player Control
 
-> Implements FR-001, BR-005, AC-001…AC-004 (`specs/features/player-control/`).
+> Implements FR-001, BR-008, AC-001…AC-004 (`specs/features/player-control/`).
+
+> **v0.2 note.** Unchanged behaviour. Menu states suspend movement
+> (`plans/main-menu.md`, M2) and game speed scales world time only
+> (`plans/difficulty-speed.md`, M4). The local `BR-005` reference is now `BR-008`.
 
 ## Requirements implemented
-FR-001 (movement + clamping), BR-005, AC-001…AC-004.
+FR-001 (movement + clamping), BR-008, AC-001…AC-004.
 
 ## Architecture components affected
 - `internal/game` — `updatePlayer` (simulation).

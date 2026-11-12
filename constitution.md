@@ -1,16 +1,19 @@
 # Spirit Space — Constitution
 
-> **Status: RATIFIED.** Supreme law of the codebase. Specs, plans, tasks, and
-> code must obey it. Gameplay tunables live in `specs/features/` and may change
-> freely; they may never override an Invariant Law.
+> **Status: RATIFIED** (Amendment 001 applied 2026-11-12). Supreme law of the
+> codebase. Specs, plans, tasks, and code must obey it. Gameplay tunables live
+> in `specs/features/` and may change freely; they may never override an
+> Invariant Law. Amendment history: `docs/constitution-amendment-001.md`.
 
 ## 1. Mission and scope
 
-Spirit Space is a single-player browser space shooter: the player pilots a ship,
-shoots descending enemies, and scores points. The entire game is Go compiled to
-WebAssembly, rendered to an HTML5 Canvas. No server, no network play, no
-persistence beyond the page. Out of scope: multiplayer, accounts, analytics,
-backend services.
+Spirit Space is a single-player browser space shooter: the player pilots a
+ship, shoots incoming enemies, and scores points. The entire game is Go
+compiled to WebAssembly, rendered to an HTML5 Canvas. No server, no network
+play, and no persistence other than **optional, local-only browser storage of
+high scores and user settings within the page's own origin** (Amendment 001).
+Out of scope: multiplayer, accounts, analytics, backend services, telemetry,
+cookies, and any data leaving the user's browser.
 
 ## 2. Invariant Laws
 
@@ -70,10 +73,33 @@ Mandatory before merge, in order: `gofmt` (no diffs), `go vet ./...`,
 
 ## 6. Security and privacy
 
-The game has no server, no auth, no storage, and collects no data. Trust
-boundary: nothing from the page may make the simulation depend on DOM state.
-Do not introduce network calls, cookies, or persistent storage without amending
-this constitution (see §8).
+The game has no server, no auth, and collects no data. Trust boundary: nothing
+from the page may make the simulation depend on DOM state.
+
+**Local storage exception (Amendment 001).** A single, versioned key per
+concern — high scores and user settings — may be persisted in the browser's
+`localStorage` for the page's own origin, subject to all of:
+
+1. **Content limits.** Only: player-chosen alias (optional, ≤16 chars, never
+   validated for uniqueness), score, stage reached, chosen difficulty and game
+   speed, audio volumes/mute, control preferences, and schema version. No
+   device identifiers, no timestamps beyond score order, no free-form text
+   other than the optional alias.
+2. **No transmission.** Stored data is never sent anywhere. `SEC-002`
+   (no runtime network) is unchanged.
+3. **No cookies, no IndexedDB, no Cache API, no server storage.**
+   `localStorage` only, and only from `cmd/game` (Law 5 keeps `internal/game`
+   free of DOM access; scoring and validation rules still live in Go).
+4. **Reads are untrusted input.** Corrupted, truncated, oversized, or
+   schema-mismatched data must fall back to a clean default and must never
+   panic. Bounded (≤64 KiB) and versioned.
+5. **User control.** A visible "Clear saved data" action exists in the
+   settings menu; disabling persistence (or a storage failure, e.g. private
+   browsing quota errors) degrades to memory-only for the session.
+6. **No new dependency.** `localStorage` is reached through `syscall/js` from
+   `cmd/game`; `go.mod` stays `require`-free (Law 6).
+
+Anything beyond this exception requires a further amendment (§8).
 
 ## 7. API and contract stability
 

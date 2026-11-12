@@ -1,5 +1,9 @@
 # Tasks — Combat and Scoring
 
+> **v0.2 note.** Tasks here are v0.1 history. FR-002 work continues in
+> `tasks/weapons-powerups.md` (M6); scoring in `tasks/scoring-highscores.md`
+> (M7).
+
 ## TASK-CMB-01 — Firing with cooldown
 - **Objective:** Space fires one bullet per 0.2 s from the ship's nose; first
   shot immediate; bullets fly up at 500 px/s.

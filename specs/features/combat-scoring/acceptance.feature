@@ -12,7 +12,7 @@ Feature: Combat and scoring
     Then both bullet and enemy are removed
     And the score increases by 10
 
-  Scenario: Miss does not score (AC-011, AC-010)
+  Scenario: Miss does not score (AC-012)
     Given an enemy not on the bullet's path
     When the bullet passes it and leaves the top edge
     Then the score is unchanged and the bullet no longer exists

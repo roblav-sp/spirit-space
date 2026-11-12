@@ -1,5 +1,8 @@
 # Tasks — Enemy Spawning
 
+> **v0.2 note: superseded** by `tasks/formation-ai.md` and
+> `tasks/procedural-waves.md` (M5). See `plans/enemy-spawning.md`.
+
 ## TASK-ENS-01 — Seeded per-game RNG
 - **Objective:** `Game` owns a `*rand.Rand` seeded from a constant; recreated
   in `New()`.

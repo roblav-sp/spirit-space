@@ -1,5 +1,14 @@
 # Feature — Combat and Scoring
 
+> **v0.2 status.** FR-002 (base weapon) is PRESERVED: the initial weapon stays
+> a single projectile. Its stats become weapon data in
+> `specs/features/weapons-powerups/spec.md` (FR-012), which owns the firing
+> modes. FR-004.1 (+10 kill) is PRESERVED as the default basic-enemy reward;
+> BR-002 ("+10 is the only score source") is **SUPERSEDED** by BR-010 and the
+> ladder in `specs/features/scoring-highscores/spec.md` (FR-013).
+> FR-004.2 (score rendering) is unchanged, and the miss scenario in
+> `acceptance.feature` is **AC-012**, not AC-011.
+
 ## Context
 The player shoots enemies; destroyed enemies score points. Bullet-enemy
 collision is the only scoring mechanism. Implements FR-002, FR-004 (score
@@ -23,7 +32,9 @@ Game not over; player may fire (BR-003: cooldown is the only constraint).
 - **FR-004.2** — Score is rendered on the canvas each frame.
 
 ## Business rules
-- BR-002: exactly +10 per kill; no other score source.
+- BR-002: exactly +10 per kill; no other score source. *(v0.2: SUPERSEDED by
+  BR-010 — keep 10 as the basic-enemy default, add class/wave/combo rewards via
+  FR-013.)*
 - BR-003: no ammo; only the cooldown limits firing.
 - BR-005: one bullet destroys one enemy (no piercing).
 

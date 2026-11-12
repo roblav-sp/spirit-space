@@ -1,5 +1,12 @@
 # Feature — Player Control
 
+> **v0.2 status.** PRESERVED unchanged. Additions: movement is suspended in
+> every non-`PLAYING` state and cleared on window blur (`main-menu` FR-006.9),
+> and game speed scales world time, so the ship's **px per world second** stays
+> 300 at every setting (BR-011, ADR-0012). The business rule previously numbered
+> `BR-005` here is now **BR-008** to resolve the collision with the combat rule
+> (audit §4).
+
 ## Context
 The player pilots a ship near the bottom of the 800×600 world. Movement is
 the player's only defensive tool besides shooting. Implements FR-001.
@@ -18,7 +25,9 @@ A run exists (`New()` or `Restart()`); game not over.
   (`[Radius, Width−Radius] × [Radius, Height−Radius]`).
 
 ## Business rules
-- BR-005: Movement speed is constant; no acceleration or inertia.
+- BR-008: Movement speed is constant; no acceleration or inertia. (Formerly
+  labelled `BR-005` in this spec; `BR-005` now unambiguously means "one bullet,
+  one enemy" in `combat-scoring`.)
 
 ## Acceptance criteria
 - **AC-001** — Given the game started, when Right is held for 1 s at 60 FPS,
