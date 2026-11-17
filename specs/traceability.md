@@ -131,7 +131,7 @@ none of them exist yet.
 | FR-004.2 score/HUD rendering extended for v0.2 | `scoring-highscores` | AC-173 HUD assertions | **TODO** |
 | NFR-005 (60 FPS measured) | `product.md` §5 | M9 measurement note | **TODO** |
 | Amendment 001 ratified | `docs/constitution-amendment-001.md`, `constitution.md` §1/§6 | approval record filled; §1/§6 amended | ✔ verified (documented) |
-| `LICENSE` + `CREDITS.md` | audit D-5 | files exist | **TODO** |
+| `LICENSE` + `CREDITS.md` | audit D-5 | files exist | partial — `LICENSE` (proprietary, TEXUGO DO MEL INC.) and `CREDITS.md` written and linked; asset rows pending `TASK-AUD-04` |
 
 ## 3. Remaining follow-ups (carried over)
 
@@ -148,6 +148,9 @@ none of them exist yet.
 - Verified (v0.1): 15 rows.
 - Partial: 5 rows.
 - TODO (v0.2 + process): 60+ rows, listed above.
-- Decided: D-1 (amendment ratified), D-2 (escape harmless).
-- Still open: spread damage split (M6), D-3 ID corrections, D-4 scoring
-  supersession approval, D-5 `LICENSE`/`CREDITS`, D-6 `TASK-INFRA-01`.
+- Decided: D-1 (amendment ratified), D-2 (escape harmless), D-5 (proprietary
+  license, `TEXUGO DO MEL INC.`), D-6 (`TASK-INFRA-01` approved).
+- Still open: spread damage split (M6, `AC-162`), D-3 ID corrections, D-4
+  scoring supersession approval, music sourcing (`TASK-AUD-05`), closed-source
+  posture vs. public remote (`TASK-INFRA-05`).
+- Execution order for every task: `tasks/index.md`.

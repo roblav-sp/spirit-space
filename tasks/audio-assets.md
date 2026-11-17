@@ -58,3 +58,25 @@
 - **Verification evidence:** importer output + `.agents/skills/browser-verify/scripts/verify.sh` PASS +
   manifest totals.
 - **Out of scope:** original music composition, sprite atlases.
+
+## TASK-AUD-05 — Music sourcing decision (`music.menu`, `music.stage`, `music.boss`)
+- **Objective:** decide and document where the three music tracks come from, or
+  amend the spec to make music optional, then add the chosen pack to
+  `scripts/download_assets.py` `PACKS` with its official page.
+- **Requirement IDs:** FR-016.4 (per-state music, ≤300 ms cross-fade),
+  `specs/contracts/assets.md` (IDs + budgets)
+- **Dependencies:** owner decision (OPEN — see `tasks/index.md`)
+- **Files in scope (after the decision only):** `specs/features/audio-assets/spec.md`
+  (§Open questions), `specs/contracts/assets.md`,
+  `scripts/download_assets.py` (`PACKS`), `docs/ASSET_MANIFEST.md` §5
+- **Constraints:** no invented ZIP URL; no invented license verdict; the
+  silence fallback (FR-016.6) stays valid if music is dropped.
+- **Expected tests:** none until a pack exists; then `--check` plus the budget
+  test (`TestManifestBudget`).
+- **Verification evidence:** the decision recorded in the feature spec, and
+  `python3 scripts/download_assets.py --list` showing the added pack.
+- **Out of scope:** composing original music.
+
+> **Gap this task closes.** None of the eight packs already in `PACKS` contains
+> loopable stage music, so `music.*` currently has no legal source. Do not add a
+> ninth pack before the spec says which one and why.

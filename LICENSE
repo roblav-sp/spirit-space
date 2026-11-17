@@ -1,0 +1,56 @@
+Copyright (c) 2026 TEXUGO DO MEL INC. All rights reserved.
+
+PROPRIETARY SOFTWARE — NO LICENSE GRANTED
+
+This software, its source code, WebAssembly build, assets, documentation and
+all associated files (collectively, the "Software") are the exclusive
+proprietary property of TEXUGO DO MEL INC.
+
+1. NO LICENSE. No permission is granted to use, copy, reproduce, modify,
+   translate, merge, publish, distribute, sublicense, sell, rent, host, serve,
+   embed, reverse engineer (except where such restriction is prohibited by
+   applicable law), or create derivative works from the Software, in whole or
+   in part, by any means and for any purpose, without the prior written consent
+   of TEXUGO DO MEL INC.
+
+2. VIEWING IS NOT A LICENSE. Access to, or viewing of, the Software —
+   including through a public repository, a deployment, or a distributed
+   WebAssembly module — grants no license, express or implied, under any
+   copyright, patent, trademark, trade secret, or other intellectual property
+   right of TEXUGO DO MEL INC.
+
+3. NO TRADEMARK RIGHTS. The names "Spirit Space", "TEXUGO DO MEL INC.", and any
+   associated logos, marks or trade dress may not be used without prior written
+   permission.
+
+4. THIRD-PARTY COMPONENTS. The Software bundles or imports third-party
+   materials that remain under their own licenses, including CC0 1.0 assets and
+   the Go standard library runtime (BSD-3-Clause). Those licenses govern their
+   respective components; they are listed in CREDITS.md, and nothing in this
+   notice limits the rights granted to you by them. The inclusion of a
+   third-party component does not place any part of the Software under that
+   component's license.
+
+5. NO WARRANTY. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
+   NON-INFRINGEMENT. YOUR USE OF THE SOFTWARE IS AT YOUR OWN RISK.
+
+6. LIMITATION OF LIABILITY. IN NO EVENT SHALL TEXUGO DO MEL INC., ITS
+   DIRECTORS, OFFICERS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY CLAIM, DAMAGES,
+   OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE,
+   ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+7. TERMINATION. Any rights granted by a separate written agreement with
+   TEXUGO DO MEL INC. terminate automatically if its terms are breached. Absent
+   such an agreement, no rights exist to terminate.
+
+For licensing enquiries: TEXUGO DO MEL INC.
+
+---
+
+NOTE (not part of the license): this text is a standard proprietary notice, not
+legal advice. Have counsel confirm the governing-law, jurisdiction and
+contractor/contributor-assignment clauses before relying on it commercially.
+See `tasks/infrastructure.md` TASK-INFRA-05.

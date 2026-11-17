@@ -65,7 +65,7 @@ index.html        Page shell + bootstrap script
 build.sh          Compiles main.wasm and copies wasm_exec.js
 constitution.md   Project laws — read before changing anything
 specs/            Product, features, architecture, contracts, ADRs, traceability
-plans/, tasks/    Implementation plans and atomic tasks
+plans/, tasks/    Implementation plans and atomic tasks (start at tasks/index.md)
 templates/        Document templates
 docs/             Historical gameplay spec (superseded by specs/)
 ```
@@ -89,16 +89,22 @@ This repository follows a spec-first process (see `constitution.md` and
 Change process in short: update the spec first, code second, keep the
 traceability matrix honest, and never bypass the quality gates listed above.
 
-## Git setup (first time only)
+## Where to start work
 
-This project currently has no git history. To initialize:
+`tasks/index.md` is the master execution order: every atomic task, its
+dependencies, and the critical path. Open it before picking anything up.
 
-```bash
-git init
-git add .
-git commit -m "Initial commit: Spirit Space with spec-driven docs"
-```
+## License
 
-`.gitignore` is already present — it excludes build artifacts
-(`main.wasm`, `wasm_exec.js`) and the browser-skill's local
-`node_modules`/screenshots, so the commit stays clean.
+**Proprietary — all rights reserved.** © 2026 TEXUGO DO MEL INC.
+No license is granted: the code, assets and builds may not be used, copied,
+modified, or redistributed without prior written consent. See `LICENSE` for the
+full terms and `CREDITS.md` for third-party notices (the bundled Go runtime is
+BSD-3-Clause; imported art/audio is CC0 once approved).
+
+## Git
+
+History starts at `3fae24f` on `main`; remote `origin` is
+`git@github.com:roblav-sp/spirit-space.git`. `.gitignore` excludes build
+artifacts (`main.wasm`, `wasm_exec.js`), downloaded asset archives, and the
+browser-skill's local `node_modules`/screenshots, so commits stay clean.
