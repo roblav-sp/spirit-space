@@ -27,8 +27,8 @@ may run in any order (or in parallel sessions).
 | # | Task | Status | Blocks | Notes |
 |---|---|---|---|---|
 | 0.1 | `TASK-INFRA-01` build tags so `go vet ./...` / `go test ./...` pass | **NEXT** | INFRA-04, all "gates green" claims | D-6 approved. Only code change in Wave 0. |
-| 0.2 | `TASK-INFRA-03` `LICENSE` + `CREDITS.md` | `PARTIAL` | AUD-04 | Proprietary license decided (see `LICENSE`); credits need asset rows at M8. |
-| 0.3 | `TASK-INFRA-05` repo visibility + closed-source posture | **BLOCKED** | nothing yet; decide before publishing | Public remote `roblav-sp/spirit-space` vs. proprietary license. |
+| 0.2 | `TASK-INFRA-03` `LICENSE` + `CREDITS.md` | `PARTIAL` | AUD-04 | PolyForm Strict 1.0.0 decided (see `LICENSE`); credits need asset rows at M8. |
+| 0.3 | `TASK-INFRA-05` repo visibility + license posture | **BLOCKED** | nothing yet; decide before publishing | Public remote `roblav-sp/spirit-space` under a source-visible, noncommercial license. |
 
 Exit criteria: four gates green on `main`; `LICENSE`/`CREDITS.md` linked from
 `README.md`.
@@ -207,11 +207,11 @@ DFS-01 ─► DFS-02 ─► DFS-03, DFS-04
 |---|---|---|---|
 | D-3 | ID renames from audit §4 | none (already applied) | — |
 | D-4 | scoring ladder supersedes BR-002 | 5.6 | assumed accepted (audit) |
-| D-5 | `LICENSE` / `CREDITS.md` | 7.5 | **DECIDED: proprietary, TEXUGO DO MEL INC.** |
+| D-5 | `LICENSE` / `CREDITS.md` | 7.5 | **DECIDED: PolyForm Strict 1.0.0, © TEXUGO DO MEL INC.** |
 | D-6 | `TASK-INFRA-01` build tags | 0.1 | **DECIDED: yes** |
 | — | `AC-162` spread damage split | 5.2 | **OPEN** |
 | — | music pack source | 7.4, 7.5 | **OPEN** |
-| — | public repo vs. closed source | 0.3 | **OPEN** |
+| — | public repo vs. source-visible noncommercial license | 0.3 | **OPEN** |
 
 ## Progress
 

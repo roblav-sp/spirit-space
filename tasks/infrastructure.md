@@ -36,11 +36,13 @@
 - **Out of scope:** visual regression goldens.
 
 ## TASK-INFRA-03 — License and credits files
-- **Dependencies:** owner choice of code license — **DECIDED: proprietary
-  (all rights reserved), holder `TEXUGO DO MEL INC.`**
-- **Status:** `LICENSE` written (proprietary notice); `CREDITS.md` written with
-  runtime/tooling notices and an empty asset table. Remaining: asset rows, which
-  can only be filled after TASK-AUD-04.
+- **Dependencies:** owner choice of code license — **DECIDED: PolyForm Strict
+  1.0.0** (source-visible, noncommercial, no redistribution or derivatives),
+  holder `TEXUGO DO MEL INC.`
+- **Status:** `LICENSE` written (official PolyForm Strict text + plain-language
+  summary); `CREDITS.md` written with runtime/tooling notices and an empty
+  asset table. Remaining: asset rows, which can only be filled after
+  TASK-AUD-04.
 - **Requirement IDs:** audit §7 decision D-5; SEC-004
 - **Files in scope:** `LICENSE`, `CREDITS.md`, `README.md`
 - **Constraints:** asset credits must match `docs/ASSET_MANIFEST.md`; no claim of
@@ -50,9 +52,9 @@
   manifest.
 - **Out of scope:** per-file license headers.
 
-## TASK-INFRA-05 — Closed-source posture vs. public remote
-- **Objective:** decide and record how a proprietary codebase coexists with a
-  public GitHub remote, and act on it.
+## TASK-INFRA-05 — Repository visibility vs. license posture
+- **Objective:** decide and record how a source-visible, noncommercial codebase
+  coexists with a public GitHub remote, and act on it.
 - **Requirement IDs:** constitution §1/§6 (no data leaves the browser);
   audit §7 decision D-5
 - **Dependencies:** owner decision (OPEN)
@@ -61,14 +63,15 @@
   protection) — not editable by an agent.
 - **Constraints:** the `LICENSE` text must not be weakened to match a public
   repo; making the repo private is a settings change, not a code change; no
-  secrets may ever be committed.
-- **Expected tests:** none (policy). Manual review at each release.
+  secrets may ever be committed.- **Expected tests:** none (policy). Manual review at each release.
 - **Verification evidence:** the decision recorded in `README.md` §License and
   the repository settings changed or explicitly left alone.
 - **Out of scope:** CLA/contributor agreements, trademark registration.
-- **Note:** a WASM build is downloadable and inspectable by any player; a
-  proprietary license grants no technical protection. Decide whether that is
-  acceptable before publishing a public build.
+- **Note:** a WASM build is downloadable and inspectable by any player, and
+  PolyForm Strict grants no technical protection. Decide whether a public build
+  is acceptable before publishing one. Loosening the license later is safe;
+  tightening it later is not, because earlier recipients keep the rights they
+  already received.
 
 ## TASK-INFRA-04 — CI pipeline for the gates
 - **Objective:** run gofmt/vet/test/build on push with the same commands the

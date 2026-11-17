@@ -4,9 +4,10 @@
 > (provenance). Pairs with `docs/ASSET_MANIFEST.md` (human license review) and
 > `assets/asset-manifest.json` (machine checksums).
 
-**Code and game content:** © 2026 TEXUGO DO MEL INC. All rights reserved.
-Proprietary — see `LICENSE`. This file exists **because** third-party material
-requires attribution or notice even in a closed-source product.
+**Code and game content:** © 2026 TEXUGO DO MEL INC. Licensed under the
+**PolyForm Strict License 1.0.0** (source-visible, noncommercial only, no
+redistribution or derivatives) — see `LICENSE`. This file exists **because**
+third-party material keeps its own terms even in a source-visible product.
 
 ## 1. Runtime dependencies
 
@@ -31,8 +32,8 @@ approved in `docs/ASSET_MANIFEST.md` §4:
 | *(none)* | | | | | |
 
 Rules:
-- CC0 1.0 permits use in proprietary works and requires no attribution; credit
-  is given here anyway, for provenance and good faith.
+- CC0 1.0 permits any use, including commercial and closed-source, and requires
+  no attribution; credit is given here anyway, for provenance and good faith.
 - No asset author endorses or is affiliated with this project.
 - Never commit a pack whose manifest state is `REVIEW_REQUIRED` or
   `CHECK_LICENSE_CONTENT`.

@@ -96,11 +96,17 @@ dependencies, and the critical path. Open it before picking anything up.
 
 ## License
 
-**Proprietary — all rights reserved.** © 2026 TEXUGO DO MEL INC.
-No license is granted: the code, assets and builds may not be used, copied,
-modified, or redistributed without prior written consent. See `LICENSE` for the
-full terms and `CREDITS.md` for third-party notices (the bundled Go runtime is
-BSD-3-Clause; imported art/audio is CC0 once approved).
+**PolyForm Strict 1.0.0** — source-visible, noncommercial only. © 2026
+TEXUGO DO MEL INC.
+
+You may read this source and play the game for personal, noncommercial
+purposes. You may **not** redistribute or rehost it, modify it, publish
+derivatives, or use it commercially without a separate written license. See
+`LICENSE` for the official text plus a plain-language summary, and
+`CREDITS.md` for third-party notices (bundled Go runtime is BSD-3-Clause;
+imported art/audio is CC0 once approved).
+
+Required Notice: Copyright 2026 TEXUGO DO MEL INC.
 
 ## Git
 

@@ -1,56 +1,134 @@
-Copyright (c) 2026 TEXUGO DO MEL INC. All rights reserved.
+PolyForm Strict License 1.0.0
 
-PROPRIETARY SOFTWARE — NO LICENSE GRANTED
+https://polyformproject.org/licenses/strict/1.0.0
 
-This software, its source code, WebAssembly build, assets, documentation and
-all associated files (collectively, the "Software") are the exclusive
-proprietary property of TEXUGO DO MEL INC.
+Required Notice: Copyright 2026 TEXUGO DO MEL INC.
 
-1. NO LICENSE. No permission is granted to use, copy, reproduce, modify,
-   translate, merge, publish, distribute, sublicense, sell, rent, host, serve,
-   embed, reverse engineer (except where such restriction is prohibited by
-   applicable law), or create derivative works from the Software, in whole or
-   in part, by any means and for any purpose, without the prior written consent
-   of TEXUGO DO MEL INC.
+--------------------------------------------------------------------------------
 
-2. VIEWING IS NOT A LICENSE. Access to, or viewing of, the Software —
-   including through a public repository, a deployment, or a distributed
-   WebAssembly module — grants no license, express or implied, under any
-   copyright, patent, trademark, trade secret, or other intellectual property
-   right of TEXUGO DO MEL INC.
+Acceptance
 
-3. NO TRADEMARK RIGHTS. The names "Spirit Space", "TEXUGO DO MEL INC.", and any
-   associated logos, marks or trade dress may not be used without prior written
-   permission.
+In order to get any license under these terms, you must agree
+to them as both strict obligations and conditions to all
+your licenses.
 
-4. THIRD-PARTY COMPONENTS. The Software bundles or imports third-party
-   materials that remain under their own licenses, including CC0 1.0 assets and
-   the Go standard library runtime (BSD-3-Clause). Those licenses govern their
-   respective components; they are listed in CREDITS.md, and nothing in this
-   notice limits the rights granted to you by them. The inclusion of a
-   third-party component does not place any part of the Software under that
-   component's license.
+Copyright License
 
-5. NO WARRANTY. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
-   NON-INFRINGEMENT. YOUR USE OF THE SOFTWARE IS AT YOUR OWN RISK.
+The licensor grants you a copyright license for the software
+to do everything you might do with the software that would
+otherwise infringe the licensor's copyright in it for any
+permitted purpose, other than distributing the software or
+making changes or new works based on the software.
 
-6. LIMITATION OF LIABILITY. IN NO EVENT SHALL TEXUGO DO MEL INC., ITS
-   DIRECTORS, OFFICERS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY CLAIM, DAMAGES,
-   OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE,
-   ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-   DEALINGS IN THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Patent License
 
-7. TERMINATION. Any rights granted by a separate written agreement with
-   TEXUGO DO MEL INC. terminate automatically if its terms are breached. Absent
-   such an agreement, no rights exist to terminate.
+The licensor grants you a patent license for the software that
+covers patent claims the licensor can license, or becomes able
+to license, that you would infringe by using the software.
 
-For licensing enquiries: TEXUGO DO MEL INC.
+Noncommercial Purposes
 
----
+Any noncommercial purpose is a permitted purpose.
 
-NOTE (not part of the license): this text is a standard proprietary notice, not
-legal advice. Have counsel confirm the governing-law, jurisdiction and
-contractor/contributor-assignment clauses before relying on it commercially.
-See `tasks/infrastructure.md` TASK-INFRA-05.
+Personal Uses
+
+Personal use for research, experiment, and testing for
+the benefit of public knowledge, personal study, private
+entertainment, hobby projects, amateur pursuits, or religious
+observance, without any anticipated commercial application,
+is use for a permitted purpose.
+
+Noncommercial Organizations
+
+Use by any charitable organization, educational institution,
+public research organization, public safety or health
+organization, environmental protection organization,
+or government institution is use for a permitted purpose
+regardless of the source of funding or obligations resulting
+from the funding.
+
+Fair Use
+
+You may have "fair use" rights for the software under the
+law. These terms do not limit them.
+
+No Other Rights
+
+These terms do not allow you to sublicense or transfer any of
+your licenses to anyone else, or prevent the licensor from
+granting licenses to anyone else.  These terms do not imply
+any other licenses.
+
+Patent Defense
+
+If you make any written claim that the software infringes or
+contributes to infringement of any patent, your patent license
+for the software granted under these terms ends immediately. If
+your company makes such a claim, your patent license ends
+immediately for work on behalf of your company.
+
+Violations
+
+The first time you are notified in writing that you have
+violated any of these terms, or done anything with the software
+not covered by your licenses, your licenses can nonetheless
+continue if you come into full compliance with these terms,
+and take practical steps to correct past violations, within
+32 days of receiving notice.  Otherwise, all your licenses
+end immediately.
+
+No Liability
+
+As far as the law allows, the software comes as is, without
+any warranty or condition, and the licensor will not be liable
+to you for any damages arising out of these terms or the use
+or nature of the software, under any kind of legal claim.
+
+Definitions
+
+The "licensor" is the individual or entity offering these
+terms, and the "software" is the software the licensor makes
+available under these terms.
+
+"You" refers to the individual or entity agreeing to these
+terms.
+
+"Your company" is any legal entity, sole proprietorship,
+or other kind of organization that you work for, plus all
+organizations that have control over, are under the control of,
+or are under common control with that organization.  "Control"
+means ownership of substantially all the assets of an entity,
+or the power to direct its management and policies by vote,
+contract, or otherwise.  Control can be direct or indirect.
+
+"Your licenses" are all the licenses granted to you for the
+software under these terms.
+
+"Use" means anything you do with the software requiring one
+of your licenses.
+
+--------------------------------------------------------------------------------
+
+PROJECT NOTES (not part of the license text above)
+
+Licensor: TEXUGO DO MEL INC. ("Spirit Space").
+Software: this repository, its Go source, its WebAssembly build, and the
+original assets and documentation in it.
+
+In plain language, PolyForm Strict 1.0.0 means:
+- You may read the source and play the game for personal, noncommercial
+  purposes (including study, hobby use, and teaching).
+- You may NOT redistribute, publish, mirror, or rehost the software or a
+  build of it, in whole or in part.
+- You may NOT modify it or publish modified versions or derivatives.
+- You may NOT use it commercially. Commercial use requires a separate written
+  license from TEXUGO DO MEL INC.
+
+Third-party components keep their own licenses and are not relicensed by this
+file: the bundled Go standard library runtime is BSD-3-Clause, and any
+imported art or audio is CC0 1.0 once approved. See CREDITS.md. Where those
+licenses conflict with this one for their own components, theirs govern.
+
+This is a standard license text plus a plain-language summary, not legal
+advice; the official wording at the URL above controls. Have counsel confirm
+the commercial terms before relying on them.
